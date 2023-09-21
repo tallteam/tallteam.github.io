@@ -374,12 +374,18 @@ function showLongBanner()
 
 function showPreGameInterstitial(audioOn)
 {
-  showInterstitial(audioOn, 'start', 'pregame');
+  if(!window.adblockDetected)
+  {
+    showInterstitial(audioOn, 'start', 'pregame');
+  }
 }
 
 function showWinCeremonyInterstitial(audioOn)
 {
-  showInterstitial(audioOn, 'next', 'winceremony')
+  if(!window.adblockDetected)
+  {
+    showInterstitial(audioOn, 'next', 'winceremony')
+  }
 }
 
 function interstitialStart()

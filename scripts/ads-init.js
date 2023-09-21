@@ -118,6 +118,23 @@ if(isAdinPlayEnabled())
         buttonPosition: "bottom-left" //bottom-left, bottom-right, top-left, top-right
     }
 
+    //init video player
+    if(videoAdProvider === AdProviderAdinplay)
+    {
+        aiptag.cmd.player.push(function() {
+            aiptag.adplayer = new aipPlayer({
+                AD_WIDTH: 960,
+                AD_HEIGHT: 540,
+                AD_DISPLAY: 'fullscreen', //default, fullscreen, center, fill
+                LOADING_TEXT: 'loading advertisement',
+                PREROLL_ELEM: function(){return document.getElementById('preroll')},
+                AIP_COMPLETE: onInterstitialComplete,
+                AIP_REWARDEDCOMPLETE: onRewardedInterstitialComplete,
+                AIP_REWARDEDGRANTED: onRewardedInterstitialGranted
+            });
+        });
+    }
+
     var adinplayScript = document.createElement("script");
     adinplayScript.type = "text/javascript";
     adinplayScript.async = true;

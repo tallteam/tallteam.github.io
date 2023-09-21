@@ -8,14 +8,6 @@ function setV(val2)
     }
 }
 
-function getReferrerUrl()
-{
-  var url = (window.location != window.parent.location)
-    ? document.referrer
-    : document.location.href;
-    return url;
-}
-
 function isMobile()
 {
   var isMobile = RegExp(/Android|webOS|iPhone|iPod|iPad/i).test(navigator.userAgent);

@@ -131,10 +131,6 @@
 				<div id="pw_ondeath"></div>
 				<!-- <div data-pw-desk="leaderboard_atf" data-pw-mobi="leaderboard_atf"></div> -->
 			</div>
-			<div id="videoAdContainer">
-				<div id="preroll"></div>
-			</div>
-
 		</div>
 		<div id="btmContainer">
 			<div id="btmAdPlaceholder">
@@ -149,6 +145,7 @@
 		<div id="pw-video-container"> <!-- playwire -->
 			<div id="pw-video-placeholder"></div>
 		</div>
+		<div id="preroll"></div> <!-- adinplay -->
 		<iframe id="xsolla-iframe"></iframe>
 	</div>
 	<div id="rightContainer">
@@ -229,11 +226,11 @@
 	var sentGameInstanceStartEvent = false;
 
 	{{__BUILD_URL__}}
-	const loaderUrl = buildUrl + "/ws9.loader.js";
+	const loaderUrl = buildUrl + "/SmashKarts_np6.loader.js";
 	const config = {
-		dataUrl: buildUrl + "/dc993e71bf7a2582bc78c693f33025fa.data.br",
-		frameworkUrl: buildUrl + "/6e3c6b3de3b73c599c822a32b998f6e7.js.br",
-		codeUrl: buildUrl + "/c7dd03e96668895cc3fd9a9fd9803430.wasm.br",
+		dataUrl: buildUrl + "/f37cbeb042ce29d347d5e8b55a91e472.data.br",
+		frameworkUrl: buildUrl + "/bfea129878b1695e48b98405e92979e8.js.br",
+		codeUrl: buildUrl + "/b727b891dd994a38943c8b09dd35d006.wasm.br",
 		// #if MEMORY_FILENAME
 		//         memoryUrl: buildUrl + "/",
 		// #endif
@@ -243,7 +240,7 @@
 		streamingAssetsUrl: "StreamingAssets",
 		companyName: "TallTeam",
 		productName: "Smash Karts",
-		productVersion: "2.1.4",
+		productVersion: "2.1.9",
 	};
 
 	var mainContainer = document.querySelector("#mainContainer");
